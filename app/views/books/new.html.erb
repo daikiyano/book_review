@@ -1,0 +1,16 @@
+<p>New book</p>
+
+<%= form_for(@book, multipart: true) do |f| %>
+<label>Category</label>
+<%= f.select :category_number, options_from_collection_for_select(Category.all, :id, :name), :include_blank => "category" %>
+<br>
+<label>book title</label>
+<%= f.text_field :title, class:"form-control" %><br>
+<label>description</label>
+<%= f.text_field :description, class:"form-control" %><br>
+<label>author</label>
+<%= f.text_field :author, class:"form-control" %><br>
+<label>Image</label>
+<%= f.file_field :image, class:"form-control" %><br>
+<%= f.button :submit %><br>
+<% end %>

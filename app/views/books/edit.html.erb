@@ -1,0 +1,13 @@
+<h1> Edit book</h1>
+<%= form_with(model: @book) do |form| %>
+
+
+<label>title</label><br>
+<%= form.text_field :title, class:"form-control" %><br>
+<label>description</label><br>
+<%= form.text_field :description, class:"form-control" %><br>
+<label>author</label><br>
+<%= form.text_field :author, class:"form-control" %><br>
+<%= form.submit "update", class:"btn btn-default" %><br>
+
+<% end %>
